@@ -1,0 +1,32 @@
+{
+    "name": "weather-app",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "webpack",
+        "watch": "webpack --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yiechernchuen/Weather-App.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/yiechernchuen/Weather-App/issues"
+    },
+    "homepage": "https://github.com/yiechernchuen/Weather-App#readme",
+    "devDependencies": {
+        "css-loader": "^6.8.1",
+        "eslint": "^8.44.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-config-prettier": "^8.8.0",
+        "eslint-plugin-import": "^2.27.5",
+        "style-loader": "^3.3.3",
+        "webpack": "^5.88.1",
+        "webpack-cli": "^5.1.4"
+    }
+}
