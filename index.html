@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="main.js" defer></script>
+        <script src="https://kit.fontawesome.com/62754bb2af.js" crossorigin="anonymous"></script>
+        <title>Web App</title>
+    </head>
+    <body>
+        <header class="title">
+            <h1>WeatherZen</h1>
+            <form novalidate>
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <div>
+                    <input class="inputLocation" type="text" required />
+                    <p class="inputErrorMsg"></p>
+                </div>
+            </form>
+        </header>
+        <div class="container">
+            <div class="displayContainer">
+                <header class="location section1">
+                    <h1 class="region"></h1>
+                </header>
+                <div class="section2">
+                    <img class="weather" src="#" alt="weather" />
+                    <p class="temperature"></p>
+                    <button class="celsius">°C</button>
+                    <span> | </span>
+                    <button class="fahrenheit">°F</button>
+                    <p class="weatherDescription"></p>
+                </div>
+                <div class="section3">
+                    <div>
+                        <i class="fa-solid fa-temperature-quarter"></i>
+                        <p class="feelsLikeTemp"></p>
+                        <span>°C</span>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-droplet"></i>
+                        <p class="humidity"></p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-wind"></i>
+                        <p class="windSpeed"></p>
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-lungs"></i>
+                        <p class="airQuality"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer>
+            Copyright @ 2023 yiechernchuen
+            <a href="https://github.com/yiechernchuen" target="_blank"><i class="fa-brands fa-github"></i></a>
+        </footer>
+    </body>
+</html>
