@@ -1,1 +1,115 @@
+html {
+    box-sizing: border-box;
+}
 
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: lilita;
+}
+
+@font-face {
+    font-family: lilita;
+    src: url(./font/LilitaOne-Regular.ttf);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.title {
+    outline: 1px solid red;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+form > div {
+    position: relative;
+}
+
+.inputErrorMsg {
+    position: absolute;
+    top: 1.5rem;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+}
+
+.show {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.container {
+    outline: 1px solid blue;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.displayContainer {
+    outline: 1px solid purple;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.section2,
+.section3 {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+.section3 {
+    justify-content: space-between;
+}
+
+.section3 > div {
+    display: flex;
+    gap: 2px;
+}
+
+span {
+    white-space: pre;
+}
+
+.celsius,
+.fahrenheit {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+footer {
+    outline: 1px solid green;
+    margin-top: auto;
+}
+
+.fa-github {
+    color: black;
+    transition: transform 0.5s ease-in-out;
+}
+
+.fa-github:hover {
+    transform: rotate(360deg) scale(1.25);
+}
