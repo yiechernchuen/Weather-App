@@ -1,3 +1,33 @@
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 400;
+    src: url(./font/roboto-v30-latin-regular.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 100;
+    src: url(./font/roboto-v30-latin-100.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 300;
+    src: url(./font/roboto-v30-latin-300.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 700;
+    src: url(./font/roboto-v30-latin-700.woff2) format('woff2');
+}
+
+@font-face {
+    font-family: 'Lilita';
+    font-weight: 400;
+    src: url(./font/LilitaOne-Regular.ttf) format('truetype');
+}
+
 html {
     box-sizing: border-box;
 }
@@ -11,26 +41,53 @@ html {
 * {
     margin: 0;
     padding: 0;
-    font-family: lilita;
-}
-
-@font-face {
-    font-family: lilita;
-    src: url(./font/LilitaOne-Regular.ttf);
 }
 
 body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-image: url(./image/background-image.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
 }
 
-.title {
-    outline: 1px solid red;
-    padding: 1rem;
+.logo {
+    margin-right: auto;
+    font-size: 3rem;
+}
+
+header {
+    font-family: 'Lilita', sans-serif;
+    font-weight: 400;
+    padding: 1.5rem 2rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    color: rgb(0, 0, 0);
+}
+
+.fa-cloud-moon {
+    color: rgb(255, 255, 255);
+    position: relative;
+    padding: 1rem;
+}
+
+.fa-cloud-moon::after {
+    content: '';
+    background-color: red;
+    width: 100%;
+    padding-top: 100%;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    border-radius: 50%;
+    background-color: black;
 }
 
 form {
@@ -38,26 +95,50 @@ form {
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
+    padding-bottom: 1rem;
 }
 
 form > div {
     position: relative;
 }
 
+.inputLocation {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
+    border-bottom: 1.5px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+}
+
+.fa-magnifying-glass {
+    color: rgb(0, 0, 0);
+    font-size: 1.5rem;
+}
+
 .inputErrorMsg {
+    padding: 5px 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
     position: absolute;
-    top: 1.5rem;
+    top: 120%;
     opacity: 0;
+    background-color: rgb(240, 62, 62);
+    color: white;
+}
+
+.hidden {
     transition: opacity 2s ease-in-out;
 }
 
 .show {
     opacity: 1;
-    transition: opacity 0.5s ease-in-out;
+    transition: opacity 1s ease-in-out;
 }
 
-.container {
-    outline: 1px solid blue;
+.main {
     flex-grow: 1;
     display: flex;
     justify-content: center;
@@ -65,31 +146,61 @@ form > div {
 }
 
 .displayContainer {
-    outline: 1px solid purple;
-    padding: 2rem;
+    background-color: rgba(0, 0, 0, 0.643);
+    padding: 4rem;
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
+    gap: 1rem;
+    border-radius: 15px;
 }
 
-.section2,
-.section3 {
+.displayContainer > * {
+    color: white;
+}
+
+.section1.region {
+    font-size: 4rem;
+    font-family: 'Lilita', sans-serif;
+    font-weight: 400;
+    padding-bottom: 0.5rem;
+}
+
+.section2 {
     display: flex;
     align-items: center;
-    gap: 2px;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
-.section3 {
-    justify-content: space-between;
-}
-
-.section3 > div {
+.imgContainer {
     display: flex;
-    gap: 2px;
+    align-items: center;
+    width: max(8rem, 15%);
 }
 
-span {
-    white-space: pre;
+.weather {
+    width: 100%;
+}
+
+.temperature {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 4.5rem;
+}
+
+.section2 > div:last-child {
+    padding-bottom: 2rem;
+    white-space: nowrap;
+}
+
+.section2 > div > * {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+}
+
+.section2-btn {
+    padding-bottom: 2.5rem;
 }
 
 .celsius,
@@ -98,15 +209,69 @@ span {
     outline: none;
     background-color: transparent;
     cursor: pointer;
+    color: #868e96;
+    padding: 0 10px;
+}
+
+.celsius {
+    border-right: 1px solid white;
+    padding-right: 9px;
+}
+
+button.active {
+    font-weight: 700;
+    color: white;
+    transform: scale(1.2);
+}
+
+.weatherDescription {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+.section3 {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.section3 > div {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.section3 > div > .fa-solid {
+    font-size: 4rem;
+}
+
+.subHeader {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: #868e96;
+}
+
+.subHeaderData {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
 }
 
 footer {
-    outline: 1px solid green;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
     margin-top: auto;
+    background-color: rgba(0, 0, 0, 0.452);
+    color: white;
+    padding: 0.8rem 0;
+    text-align: center;
 }
 
 .fa-github {
-    color: black;
+    color: rgb(255, 255, 255);
     transition: transform 0.5s ease-in-out;
 }
 
