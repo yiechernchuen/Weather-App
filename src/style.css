@@ -188,11 +188,6 @@ form > div {
     font-size: 4.5rem;
 }
 
-.section2 > div:last-child {
-    padding-bottom: 2rem;
-    white-space: nowrap;
-}
-
 .section2 > div > * {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
@@ -201,6 +196,7 @@ form > div {
 
 .section2-btn {
     padding-bottom: 2.5rem;
+    white-space: nowrap;
 }
 
 .celsius,
@@ -277,4 +273,337 @@ footer {
 
 .fa-github:hover {
     transform: rotate(360deg) scale(1.25);
+}
+
+@media (min-width: 2560px) {
+    .fa-magnifying-glass {
+        font-size: 2rem;
+    }
+
+    .inputLocation {
+        font-size: 2rem;
+    }
+
+    .inputErrorMsg {
+        font-size: 2rem;
+    }
+
+    .section1.region {
+        padding-bottom: 1.5rem;
+        font-size: 5rem;
+    }
+
+    .section2 {
+        gap: 1.5rem;
+    }
+
+    .temperature {
+        font-size: 5rem;
+    }
+
+    .section2 > div > * {
+        font-size: 2.5rem;
+    }
+
+    .weatherDescription {
+        font-size: 3.5rem;
+    }
+
+    .section3 {
+        gap: 5rem;
+    }
+
+    .subHeader {
+        font-size: 2.5rem;
+    }
+
+    .subHeaderData {
+        font-size: 3.5rem;
+    }
+
+    .section3 > div > .fa-solid {
+        font-size: 6rem;
+    }
+
+    footer {
+        font-size: 1.5rem;
+        padding: 0.4rem 0;
+    }
+}
+
+@media (max-width: 1440px) {
+    .logo {
+        font-size: 2rem;
+    }
+
+    .fa-magnifying-glass {
+        font-size: 1.2rem;
+    }
+
+    .inputLocation {
+        font-size: 1.2rem;
+    }
+
+    .displayContainer {
+        padding: 2rem;
+    }
+
+    .section1.region {
+        font-size: 3.5rem;
+        padding: 0;
+    }
+
+    .section2 {
+        gap: 1.5rem;
+    }
+
+    .imgContainer {
+        width: max(6rem, 15%);
+    }
+
+    .temperature {
+        font-size: 3.5rem;
+    }
+
+    .weatherDescription {
+        font-size: 2.5rem;
+    }
+
+    .section3 {
+        gap: 2rem;
+    }
+
+    .subHeaderData {
+        font-size: 2.2rem;
+    }
+
+    footer {
+        padding: 0.4rem 0;
+    }
+}
+
+@media (max-width: 1024px) {
+    .fa-magnifying-glass {
+        font-size: 1rem;
+    }
+
+    .inputLocation {
+        font-size: 1rem;
+    }
+
+    .inputErrorMsg {
+        font-size: 1rem;
+    }
+
+    .displayContainer {
+        max-width: 70%;
+        padding: 1.5rem 2.5rem;
+    }
+
+    .section1.region {
+        padding-bottom: 0;
+        font-size: 3rem;
+    }
+
+    .section2 {
+        gap: 1rem;
+    }
+
+    .temperature {
+        font-size: 3rem;
+    }
+
+    .section3 {
+        flex-direction: column;
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        align-items: flex-start;
+    }
+
+    .section3 > div > .fa-solid {
+        font-size: 3.5rem;
+    }
+
+    .subHeaderData {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section1.region {
+        font-size: 2.5rem;
+    }
+
+    .section2 {
+        gap: 0.5rem;
+    }
+
+    .temperature {
+        font-size: 2.2rem;
+    }
+
+    .weatherDescription {
+        font-size: 2rem;
+    }
+
+    .section3 {
+        gap: 1rem;
+    }
+
+    .subHeader {
+        font-size: 1.5rem;
+    }
+
+    .section3 > div > .fa-solid {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 425px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .fa-cloud-moon {
+        padding: 8px;
+    }
+
+    form {
+        padding-bottom: 0;
+        padding-left: 0.8rem;
+    }
+
+    .displayContainer {
+        padding: 1rem 2rem;
+    }
+
+    .section1.region {
+        font-size: 2rem;
+    }
+
+    .section2-btn {
+        padding-bottom: 1.5rem;
+    }
+
+    .imgContainer {
+        width: max(5rem, 10%);
+    }
+
+    .temperature {
+        font-size: 2rem;
+    }
+
+    .fahrenheit {
+        padding-right: 0;
+    }
+
+    .section2 > div > * {
+        font-size: 1rem;
+    }
+
+    .weatherDescription {
+        font-size: 1.5rem;
+    }
+
+    .section3 {
+        gap: 2rem;
+    }
+
+    .subHeader {
+        font-size: 1.2rem;
+    }
+
+    .subHeaderData {
+        font-size: 1.5rem;
+    }
+
+    .section3 > div {
+        gap: 1rem;
+    }
+
+    .section3 > div > .fa-solid {
+        font-size: 2rem;
+    }
+
+    footer {
+        font-size: 0.8rem;
+        padding: 0.2rem 0;
+    }
+}
+
+@media (max-width: 375px) {
+    .displayContainer {
+        padding: 1.2rem 2rem;
+    }
+
+    .section1.region {
+        font-size: 1.8rem;
+    }
+
+    .imgContainer {
+        width: max(4rem, 15%);
+    }
+
+    .temperature {
+        font-size: 1.8rem;
+    }
+
+    .fahrenheit {
+        padding: 0;
+        padding-left: 8px;
+    }
+
+    .celsius {
+        padding: 0;
+        padding-right: 8px;
+    }
+
+    .section3 {
+        gap: 1rem;
+    }
+
+    .subHeader {
+        font-size: 1rem;
+    }
+
+    .subHeaderData {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .displayContainer {
+        padding: 1.2rem 1.7rem;
+    }
+
+    .main {
+        flex-grow: 0;
+        padding-top: 3rem;
+    }
+
+    .temperature {
+        font-size: 1.5rem;
+    }
+
+    .fahrenheit {
+        padding-left: 4px;
+    }
+
+    .celsius {
+        padding-right: 4px;
+    }
+
+    .section2 > div > * {
+        font-size: 0.8rem;
+    }
+
+    .weatherDescription {
+        font-size: 1.3rem;
+    }
 }
