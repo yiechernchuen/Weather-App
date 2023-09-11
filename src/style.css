@@ -125,6 +125,8 @@ form > div {
 }
 
 .inputErrorMsg {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
     padding: 5px 10px;
     font-size: 1.2rem;
     border-radius: 5px;
