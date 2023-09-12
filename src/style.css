@@ -160,6 +160,7 @@ form > div {
     flex-direction: column;
     gap: 1rem;
     border-radius: 1rem;
+    width: min(87rem, 80%);
 }
 
 .section1.region {
@@ -296,7 +297,7 @@ footer {
     }
 
     .displayContainer {
-        padding: 2rem;
+        padding: 3rem;
         width: min(80rem, 80%);
     }
 
