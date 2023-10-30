@@ -19,6 +19,7 @@ let weatherData;
 let count = 0;
 
 function interpretAirQualityData(airQuality) {
+    if (!airQuality) return 'N/A';
     const airQualityMap = new Map();
     airQualityMap.set(1, '1-Good');
     airQualityMap.set(2, '2-Moderate');
@@ -81,6 +82,7 @@ async function getCurrentWeatherObject(inputLocation) {
         { mode: 'cors' }
     );
     const json = await response.json();
+    console.log(json);
     if (!response.ok) throw json.error.message;
     return json;
 }
